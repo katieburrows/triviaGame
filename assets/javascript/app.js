@@ -8,12 +8,37 @@
                 //make sure the user can only check one radio button
             //once the timer is done OR the user has hit a submit button the screen is wiped away and the score is reported
                 //correct, incorrect, unanswered.
+var timer = 3;
+var intervalId;
+
 $("#start").on("click", function(event){
     event.preventDefault();
     $("#start").hide();
-
-
+//function to decrement counter
+    counter();
 });
+
+function counter(){
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
+}
+
+function decrement() {
+    timer--;
+    $("#countDown").html("<h2>" + timer + "</h2>");
+        if (timer === 0) {
+            $("#countDown").hide();
+            alert("Time's Up!");
+            calculateScore();
+        }
+}
+
+function calculateScore(){
+    console.log("calculate score function hit");
+}
+
+
+
 
 
 //trivia questions:
