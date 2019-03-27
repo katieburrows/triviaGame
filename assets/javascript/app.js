@@ -11,24 +11,35 @@
 var timer = 3;
 var intervalId;
 
+//when the start button is clicked it kicks off our code.
 $("#start").on("click", function(event){
     event.preventDefault();
+   //hiding the start button.
     $("#start").hide();
-//function to decrement counter
+    //function to decrement counter
     counter();
 });
 
 function counter(){
+    //clearing intervalId so that no other instances can affect the timer
     clearInterval(intervalId);
+    //setting intervalId to run decrement() every second
     intervalId = setInterval(decrement, 1000);
 }
 
+//this function is called every second from counter().
 function decrement() {
+    //taking the time down by one second.
     timer--;
+    //targeting #countDown div and updating the page with the timer's current position.
     $("#countDown").html("<h2>" + timer + "</h2>");
+        //conditional to check where the timer is at.  If the timer is run down to 0 we want to end the quiz.
         if (timer === 0) {
+            //taking the timer off the page.
             $("#countDown").hide();
+
             alert("Time's Up!");
+            //triggering the function that will check the answers.
             calculateScore();
         }
 }
