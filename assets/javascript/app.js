@@ -11,6 +11,44 @@
 var timer = 3;
 var intervalId;
 
+var questions = [{ 
+    question: "Alexander Hamilton was a US President.",
+    answers: ["true", "false"],
+    correctAnswer: "false"
+},  {
+    question: "There are four seasons every year.",
+    answers: ["true", "false"],
+    correctAnswer: "true"
+},  {
+    question: "10 + 10 = 200.",
+    answers: ["true", "false"],
+    correctAnswer: "false"
+},  {
+    question: "There are 6 continents.",
+    answers: ["true", "false"],
+    correctAnswer: "false"
+}, {
+    question: "I-25 is a literal nightmare to drive.",
+    answers: ["true", "false"],
+    correctAnswer: "true"
+}, {
+    question: "Vanilla JavaScript is comprised of jQuery and React.",
+    answers: ["true", "false"],
+    correctAnswer: "false"
+}, {
+    question: "There are 6 primary colors.",
+    answers: ["true", "false"],
+    correctAnswer: "false"
+}, {
+    question: "H20 is denser in its liquid state than its solid state.",
+    answers: ["true", "false"],
+    correctAnswer: "true"
+}, {
+    question: "New Mexico is one of the states that comprises 'the Four Corners.'",
+    answers: ["true", "false"],
+    correctAnswer: "true"
+}]
+
 //when the start button is clicked it kicks off our code.
 $("#start").on("click", function(event){
     event.preventDefault();
@@ -55,34 +93,6 @@ function calculateScore(){
 //trivia questions:
 
 /*
-"Alexander Hamilton was a US President."
-    "False"
 
-"There are four seasons every year."
-    "True"
-
-"10 + 10 = 200."
-    "False"
-
-"There are 6 continents."
-    "False"
-
-"During the US's summer world-wide carbon emissions are the lowest."
-    "True"
-
-"I-25 is a literal nightmare to drive."
-    "True"
-
-"Vanilla JavaScript is comprised of jQuery and React."
-    "False"
-
-"There are 6 primary colors."
-    "False"
-
-"H20 is denser in its liquid state than its solid state."
-    "True"
-
-"New Mexico is one of the states that comprise 'the Four Corners.'"
-    "True"
 
 */
