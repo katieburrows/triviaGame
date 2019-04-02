@@ -1,10 +1,4 @@
-//the app starts with a blank page and a start button as the only thing on the page
-    //click event on start to:
-        //the start button is wiped away and the quiz starts    
-            //timer is counting down
-                //display countdown
-            //all the questions are displayed (10 questions)
-            //all of the possible answers are displayed
+            //all of the possible answers are displayed w/ radio button
                 //make sure the user can only check one radio button
             //once the timer is done OR the user has hit a submit button the screen is wiped away and the score is reported
                 //correct, incorrect, unanswered.
@@ -12,39 +6,43 @@ var timer = 3;
 var intervalId;
 
 var questions = [{ 
-    question: "Alexander Hamilton was a US President.",
+    question: "1. Alexander Hamilton was a US President.",
     answers: ["true", "false"],
     correctAnswer: "false"
 },  {
-    question: "There are four seasons every year.",
+    question: "2. There are four seasons every year.",
     answers: ["true", "false"],
     correctAnswer: "true"
 },  {
-    question: "10 + 10 = 200.",
+    question: "3. 10 + 10 = 200.",
     answers: ["true", "false"],
     correctAnswer: "false"
 },  {
-    question: "There are 6 continents.",
+    question: "4. There are 6 continents.",
     answers: ["true", "false"],
     correctAnswer: "false"
 }, {
-    question: "I-25 is a literal nightmare to drive.",
+    question: "5. I-25 is a literal nightmare to drive.",
     answers: ["true", "false"],
     correctAnswer: "true"
 }, {
-    question: "Vanilla JavaScript is comprised of jQuery and React.",
+    question: "6. Vanilla JavaScript is comprised of jQuery and React.",
     answers: ["true", "false"],
     correctAnswer: "false"
 }, {
-    question: "There are 6 primary colors.",
+    question: "7. There are 6 primary colors.",
     answers: ["true", "false"],
     correctAnswer: "false"
 }, {
-    question: "H20 is denser in its liquid state than its solid state.",
+    question: "8. H20 is denser in its liquid state than its solid state.",
     answers: ["true", "false"],
     correctAnswer: "true"
 }, {
-    question: "New Mexico is one of the states that comprises 'the Four Corners.'",
+    question: "9. The freezing point in celsius is 0 degrees.",
+    answers: ["true", "false"],
+    correctAnswer: "true"
+}, {
+    question: "10. New Mexico is one of the states that comprises 'the Four Corners.'",
     answers: ["true", "false"],
     correctAnswer: "true"
 }]
@@ -54,8 +52,38 @@ $("#start").on("click", function(event){
     event.preventDefault();
    //hiding the start button.
     $("#start").hide();
+
     //function to decrement counter
     counter();
+
+    //looping through all the questions
+    for (var i = 0; i < questions.length; i++){
+        //creating a new paragraph for each question.
+        var newP = $("<p>");
+        
+        //creating true/false radio buttons for each question
+        var radioButtonTrue = $("<label class='radio-inline'><input type='radio' name='optradio' checked> True </label>");
+        var radioButtonFalse = $("<label class='radio-inline'><input type='radio' name='optradio' checked> False</label>");
+
+        //setting content of the new paragraph to the question that the loop is on
+        newP.text(questions[i].question);
+        
+        //appending paragraph with question in it onto the page
+        $("#questionDisplay").append(newP);
+        
+        //appending radio buttons onto the page
+        $("#questionDisplay").append(radioButtonTrue, radioButtonFalse);
+
+        
+
+
+
+        //unsquish radio buttons
+
+
+        //data- will probably play a roll in this.
+        
+    }
 });
 
 function counter(){
@@ -76,7 +104,7 @@ function decrement() {
             //taking the timer off the page.
             $("#countDown").hide();
 
-            alert("Time's Up!");
+            // alert("Time's Up!");
             //triggering the function that will check the answers.
             calculateScore();
         }
@@ -84,15 +112,6 @@ function decrement() {
 
 function calculateScore(){
     console.log("calculate score function hit");
+
+    //thinking that $(this).val() will be used and looped through again to check against the grading key that's been set up with data-.
 }
-
-
-
-
-
-//trivia questions:
-
-/*
-
-
-*/
