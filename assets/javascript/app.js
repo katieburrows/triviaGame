@@ -62,8 +62,8 @@ $("#start").on("click", function(event){
         var newP = $("<p>");
         
         //creating true/false radio buttons for each question
-        var radioButtonTrue = $("<label class='radio-inline'><input type='radio' name='optradio' checked> True </label>");
-        var radioButtonFalse = $("<label class='radio-inline'><input type='radio' name='optradio' checked> False</label>");
+        var radioButtonTrue = $("<fieldset><label class='radio-inline'><input type='radio' value = 'true' name= 'question-" + i +  " '> True </label></fieldset>");
+        var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
 
         //setting content of the new paragraph to the question that the loop is on
         newP.text(questions[i].question);
@@ -73,15 +73,6 @@ $("#start").on("click", function(event){
         
         //appending radio buttons onto the page
         $("#questionDisplay").append(radioButtonTrue, radioButtonFalse);
-
-        
-
-
-
-        //unsquish radio buttons
-
-
-        //data- will probably play a roll in this.
         
     }
 });
@@ -113,5 +104,10 @@ function decrement() {
 function calculateScore(){
     console.log("calculate score function hit");
 
+    //compare value of radio button to correct answer
+        //if correct correctAnswers++
+        //if wrong wrongAnswers++
+        //if no value was selected unanswered++
+        
     //thinking that $(this).val() will be used and looped through again to check against the grading key that's been set up with data-.
 }
