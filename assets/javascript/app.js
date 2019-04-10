@@ -4,6 +4,9 @@
                 //correct, incorrect, unanswered.
 var timer = 3;
 var intervalId;
+var right = 0;
+var wrong = 0;
+var noAnswer = 0;
 
 var questions = [{ 
     question: "1. Alexander Hamilton was a US President.",
@@ -95,7 +98,8 @@ function decrement() {
             //taking the timer off the page.
             $("#countDown").hide();
 
-            // alert("Time's Up!");
+            $("#gameArea").hide();
+            
             //triggering the function that will check the answers.
             calculateScore();
         }
@@ -104,10 +108,39 @@ function decrement() {
 function calculateScore(){
     console.log("calculate score function hit");
 
-    //compare value of radio button to correct answer
-        //if correct correctAnswers++
-        //if wrong wrongAnswers++
-        //if no value was selected unanswered++
+    
+    //check if there was an answer; compare userGuess of radio button to correct answer to calculate the score.
+        /*if (!value){
+            noAnswer++
+
+        } else if (value){
+            if (value === correctAnswer){
+                right++;
+            } else if (value != correctAnswer){
+                wrong++;
+            }
+        }
+
+        $("#scoreBoard").append(`${"Score: "}${right}${"/10"}`);
+        $("#scoreBoard").append(`${"Number of wrong answers:"} ${wrong}`);
+        $("#scoreBoard").append(`${"Number of unanswered questions:"} ${noAnswer}`);
+        */
+
+
+        //if no value unanswered++
+        //if value grab the value and store it in userGuess
+            //compare userGuess to questions[i].answers
+                //if correct correctAnswers++
+                //if wrong wrongAnswers++
+                $( "label" ).on( "click", function() {
+                    console.log( $( "label:checked" ).val() + " is checked!" );
+                  });
         
     //thinking that $(this).val() will be used and looped through again to check against the grading key that's been set up with data-.
+
+    
+        //grab value of radio button
 }
+
+
+//use data- ?
