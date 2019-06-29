@@ -18,33 +18,33 @@ var questions = [{
     answers: ["6", "7", "8", "9"],
     correctAnswer: "8"
 },  {
-    question: "4. Who is Harry Potters Godfather",
+    question: "4. Who is Harry Potter's godfather?",
     answers: ["Peter Pettigrew", "Sirius Black", "Remus Lupin", "Severus Snape"],
     correctAnswer: "Sirius Black"
 }, {
-    question: "5. I-25 is a literal nightmare to drive.",
-    answers: ["true", "false"],
-    correctAnswer: "true"
+    question: "5. Who put Harry Potter’s name in the Goblet of Fire?",
+    answers: ["Mad Eye Moody", "Barty Crouch", "Barty Crouch Jr", "Igor Karkaroff" ],
+    correctAnswer: "Barty Crouch Jr"
 }, {
-    question: "6. Vanilla JavaScript is comprised of jQuery and React.",
-    answers: ["true", "false"],
-    correctAnswer: "false"
+    question: "6. In the books, who asks Hermione Granger to the Yule Ball?",
+    answers: ["Viktor Krum", "Ron Weasley", "Neville Longbottom", "All of the above"],
+    correctAnswer: "All of the above"
 }, {
-    question: "7. There are 6 primary colors.",
-    answers: ["true", "false"],
-    correctAnswer: "false"
+    question: "7. What form does Harry Potter’s Patronus take?",
+    answers: ["Doe", "Dog", "Otter", "Stag"],
+    correctAnswer: "Stag"
 }, {
-    question: "8. H20 is denser in its liquid state than its solid state.",
-    answers: ["true", "false"],
-    correctAnswer: "true"
+    question: "8. How many Deathly Hollows are there?",
+    answers: ["1", "2", "3", "4"],
+    correctAnswer: "3"
 }, {
-    question: "9. The freezing point in celsius is 0 degrees.",
-    answers: ["true", "false"],
-    correctAnswer: "true"
+    question: "9. Who killed Albus Dumbledore? ",
+    answers: ["Voldemort", "Draco Malfoy", "Harry Potter", "Severus Snape"],
+    correctAnswer: "Severus Snape"
 }, {
-    question: "10. New Mexico is one of the states that comprises 'the Four Corners.'",
-    answers: ["true", "false"],
-    correctAnswer: "true"
+    question: "10. Which of the following professors never taught a Defense -Against the Dark Arts Class?",
+    answers: ["Severus Snape", "Mad Eye Moody", "Dolores Umbridge", "Gilderoy Lockhart"],
+    correctAnswer: "Mad Eye Moody"
 }]
 
 //when the start button is clicked it kicks off our code.
