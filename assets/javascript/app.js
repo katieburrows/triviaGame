@@ -1,4 +1,4 @@
-var timer = 30;
+var timer = 31;
 var intervalId;
 var right = 0;
 var wrong = 0;
@@ -70,11 +70,11 @@ $("#start").on("click", function(event){
     for (var i = 0; i < questions.length; i++){
 
         //creating a new paragraph for each question.
-        var newP = $("<p>");
+        var newDiv = $("<div>");
         
         //creating true/false radio buttons for each question
-        var radioButtonTrue = $("<fieldset><label class='radio-inline'><input type='radio' value = 'true' name= 'question-" + i +  " '> True </label></fieldset>");
-        var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
+        // var radioButtonTrue = $("<fieldset><label class='radio-inline'><input type='radio' value = 'true' name= 'question-" + i +  " '> True </label></fieldset>");
+        // var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
 
         //setting content of the new paragraph to the question that the loop is on
         newP.text(questions[i].question);

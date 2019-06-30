@@ -1,0 +1,18 @@
+#gameArea {
+    padding: 10px;
+    background: blue;
+}
+
+#questions {
+    padding: 200px;
+    background: red;
+}
+
+#answers {
+    padding: 200px;
+    background: yellow;
+}
+
+#scoreBoard {
+    
+}
