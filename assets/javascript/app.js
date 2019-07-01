@@ -1,4 +1,4 @@
-var timer = 31;
+var timer = 5;
 var intervalId;
 var right = 0;
 var wrong = 0;

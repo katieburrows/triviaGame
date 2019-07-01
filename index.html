@@ -3,28 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Trivia Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Harry Potter Trivia</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-w+8Gqjk9Cuo6XH9HKHG5t5I1VR4YBNdPt/29vwgfZR485eoEJZ8rJRbm3TR32P6k" crossorigin="anonymous">
+    
     <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
 </head>
     <body>
-
-        <section id = "wrapper">
-            <h1>Trivia Game--Harry Potter Style</h1>
+        <div class="jumbotron">
+            <h1 class="display-3">Harry Potter Trivia</h1>
+            <p class="lead">Test your Harry Potter knowledge with this trivia game!  There are 10 questions and you'll have 10 seconds to answer each one.  At the end of the game your results will be displayed.</p>
+            <hr class="my-4">
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Test me!</a>
+            </p>
+        </div>
+        
+        <section id = "guts">
             
-            <button id = "start">Start!</button>
+        <div id = "countDown"></div>
             
-            <div id = "countDown"></div>
-            
-            <div id = "gameArea">
-                <div id = "questions"></div>
+        <div id = "gameArea">
+            <div id = "questions"></div>
                 <div id = "answers"></div>
             </div>
         </section>
 
-        <section id = "score">
+        <section>
             <div id = "scoreBoard"></div>
-
         </section>
         
         
