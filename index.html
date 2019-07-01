@@ -10,11 +10,11 @@
 </head>
     <body>
         <div class="jumbotron">
-            <h1 class="display-3">Harry Potter Trivia</h1>
+            <h1 class="display-3">⚡Harry Potter Trivia⚡</h1>
             <p class="lead">Test your Harry Potter knowledge with this trivia game!  There are 10 questions and you'll have 10 seconds to answer each one.  At the end of the game your results will be displayed.</p>
             <hr class="my-4">
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Test me!</a>
+              <a class="btn btn-primary btn-lg" id = "start" role="button">⚡Test me!</a>
             </p>
         </div>
         
@@ -23,9 +23,14 @@
         <div id = "countDown"></div>
             
         <div id = "gameArea">
-            <div id = "questions"></div>
-                <div id = "answers"></div>
+            <div class="card border-warning bg-warning mb-3" style="max-width: 20rem;">
+                <div class="card-header">Question: <span id = "questionCounter"></span></div>
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <p class="card-text"></p>
+                    </div>
             </div>
+        </div>
         </section>
 
         <section>
