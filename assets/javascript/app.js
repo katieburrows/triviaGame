@@ -1,4 +1,4 @@
-var timer = 5;
+var timer = 10;
 var intervalId;
 var right = 0;
 var wrong = 0;
@@ -70,20 +70,23 @@ $("#start").on("click", function(event){
     for (var i = 0; i < questions.length; i++){
 
         //creating a new paragraph for each question.
-        var newDiv = $("<div>");
+        // var newDiv = $("<div>");
         
+        for (var i = 0; i < questions.answers; i++) {
+            console.log(questions.answers[i]);
+        }
         //creating true/false radio buttons for each question
         // var radioButtonTrue = $("<fieldset><label class='radio-inline'><input type='radio' value = 'true' name= 'question-" + i +  " '> True </label></fieldset>");
         // var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
 
         //setting content of the new paragraph to the question that the loop is on
-        newP.text(questions[i].question);
+        // newP.text(questions[i].question);
         
-        //appending paragraph with question in it onto the page
-        $("#questionDisplay").append(newP);
+        // //appending paragraph with question in it onto the page
+        // $("#questionDisplay").append(newP);
         
-        //appending radio buttons onto the page
-        $("#questionDisplay").append(radioButtonTrue, radioButtonFalse);   
+        // //appending radio buttons onto the page
+        // $("#questionDisplay").append(radioButtonTrue, radioButtonFalse);   
     }
 
     //creating submit button using jQuery to apper once the start button has been hit.
