@@ -4,6 +4,10 @@ var right = 0;
 var wrong = 0;
 var noAnswer = 0;
 
+//get to individual question: questions[x].question
+//get to individual answer: questions[x].answers
+
+
 var questions = [{ 
     question: "1. What animal does Professor McGonagall turn into?",
     answers: ["toad", "rat", "cat", "penguin"],
@@ -56,7 +60,9 @@ var questions = [{
     image: "https://media.giphy.com/media/S5s0P6MhcLeeY/giphy.gif"
 }]
 
-//when the start button is clicked it kicks off our code.
+
+
+//when the start button is clicked it kicks off the trivia questions and  code.
 $("#start").on("click", function(event){
     event.preventDefault();
    
@@ -64,29 +70,52 @@ $("#start").on("click", function(event){
     $("#start").hide();
 
     //function to decrement counter
-    counter();
+    // counter();
+
+    //display one question to the div--for loop to go through each question which is being overwritten by the next question, the delay is occuring with a timer.
+
+        //when start is clicked the first question goes into the Q div and answers into the A div
+            //create the structure of the Q div with jQuery--create new p, add text, add to page.
+            //create the structure of the A div with jQuery, append it below the Q div--for loop through the answer choices, create a radio button and assign it's value as the value of the loop's iteration value
+        
+        //decrementing counter starts --10 seconds
+        //User answers or time runs out:
+            //grade the answer immediately after the user clicks the radio button: 
+                //correct
+                    //the user answers correctly
+                    //score++
+                //incorrect
+                    //the user doesn't answer
+                    //OR the answer is wrong
+                    //score variable unaffected
+        //Overwrite the question with the next question w/ .html() or whatever method blows the other text away.
+            //repeat decrementing/scoring process
+
+    //once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
+
 
     //looping through all the questions
     for (var i = 0; i < questions.length; i++){
+        console.log(questions[i]);
 
         //creating a new paragraph for each question.
-        // var newDiv = $("<div>");
+        var newDiv = $("<div>");
         
         for (var i = 0; i < questions.answers; i++) {
             console.log(questions.answers[i]);
         }
         //creating true/false radio buttons for each question
-        // var radioButtonTrue = $("<fieldset><label class='radio-inline'><input type='radio' value = 'true' name= 'question-" + i +  " '> True </label></fieldset>");
-        // var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
+        var radioButtonTrue = $("<fieldset><label class='radio-inline'><input type='radio' value = 'true' name= 'question-" + i +  " '> True </label></fieldset>");
+        var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
 
         //setting content of the new paragraph to the question that the loop is on
-        // newP.text(questions[i].question);
+        newP.text(questions[i].question);
         
-        // //appending paragraph with question in it onto the page
-        // $("#questionDisplay").append(newP);
+        //appending paragraph with question in it onto the page
+        $("#questionDisplay").append(newP);
         
-        // //appending radio buttons onto the page
-        // $("#questionDisplay").append(radioButtonTrue, radioButtonFalse);   
+        //appending radio buttons onto the page
+        $("#questionDisplay").append(radioButtonTrue, radioButtonFalse);   
     }
 
     //creating submit button using jQuery to apper once the start button has been hit.
