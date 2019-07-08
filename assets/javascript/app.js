@@ -100,23 +100,19 @@ function decrement() {
         if (timer === 0) {
             //taking the timer off the page.
             $("#countDown").hide();
-
-            $("#gameArea").hide();
             
             //triggering the function that will check the answers.
             calculateScore();
         }
 }
 
-// if (timer === 0) {
-//     //taking the timer off the page.
-//     $("#countDown").hide();
+if (timer === 0) {
+    //taking the timer off the page.
+    $("#countDown").hide();
 
-//     $("#gameArea").hide();
-    
-//     //triggering the function that will check the answers.
-//     calculateScore();
-// }
+    //triggering the function that will check the answers.
+    calculateScore();
+}
 
 // // function calculateScore(){
 // //thinking that $(this).attr() will be used and looped through again to check against the grading key 
