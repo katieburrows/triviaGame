@@ -71,6 +71,9 @@ $("#start").on("click", function(event){
 
 
 
+
+    //once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
+    
     //display one question to the div--for loop to go through each question which is being overwritten by right/wrong calculation and the corresponding gif, set on a timer, then the next question appears which overwrites the calculation/gif until there are no more questions. The delay is occuring with a timer.
 
         //when start is clicked the first question goes into the Q div and answers into the A div
@@ -156,32 +159,3 @@ if (timer === 0) {
 //once the timer is done OR the user has hit a submit button the screen is wiped away and the score is reported
 
 //use data- ?
-
-
-
-
-
-
-
-
-
-
-
-        
-        //decrementing counter starts --10 seconds
-        //User answers or time runs out:
-            //grade the answer immediately after the user clicks the radio button: 
-                //correct
-                    //the user answers correctly
-                    //score++
-                //incorrect
-                    //the user doesn't answer
-                    //OR the answer is wrong
-                    //score variable unaffected
-        //Overwrite the question with the next question w/ .html() or whatever method blows the other text away.
-            //repeat decrementing/scoring process
-
-    //once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
-
-
-
