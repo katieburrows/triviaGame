@@ -69,18 +69,6 @@ $("#start").on("click", function(event){
     //hiding the start button.
     $("#start").hide();
 
-
-
-
-    //once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
-    
-    //display one question to the div--for loop to go through each question which is being overwritten by right/wrong calculation and the corresponding gif, set on a timer, then the next question appears which overwrites the calculation/gif until there are no more questions. The delay is occuring with a timer.
-
-        //when start is clicked the first question goes into the Q div and answers into the A div
-            //create the structure of the Q div with jQuery--create new p, add text, add to page.
-            //create the structure of the A div with jQuery, append it below the Q div--for loop through the answer choices, create a radio button and assign it's value as the value of the loop's iteration value
-    
-
         //function to decrement counter
         counter();
 
@@ -159,3 +147,5 @@ if (timer === 0) {
 //once the timer is done OR the user has hit a submit button the screen is wiped away and the score is reported
 
 //use data- ?
+
+//once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
