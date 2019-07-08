@@ -96,6 +96,8 @@ if (timer === 0) {
 
 //once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
 
+//add footer
+
 // var questions = [{ 
 //     question: "1. What animal does Professor McGonagall turn into?",
 //     answers: ["toad", "cat", "rat", "bat"],
