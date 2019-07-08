@@ -1,6 +1,16 @@
-#gameArea {
-    margin: 0 auto;
+body {
+    background-image: url(../images/backgroundImg.jpg);
+    /* Photo by trashhand from Pexels */
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 80%;
+    margin: 0 auto; 
+    margin-top: 1%;
+    color: white;
+     
 }
+
 .card {
     max-width: 45rem!important;
     margin: 0 auto;
