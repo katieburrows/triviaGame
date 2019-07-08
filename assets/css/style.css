@@ -14,4 +14,5 @@ body {
 .card {
     max-width: 45rem!important;
     margin: 0 auto;
+    opacity: .8;
 }
