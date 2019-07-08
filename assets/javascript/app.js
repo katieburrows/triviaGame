@@ -76,80 +76,37 @@ $("#start").on("click", function(event){
         //when start is clicked the first question goes into the Q div and answers into the A div
             //create the structure of the Q div with jQuery--create new p, add text, add to page.
             //create the structure of the A div with jQuery, append it below the Q div--for loop through the answer choices, create a radio button and assign it's value as the value of the loop's iteration value
-
-
-
-    //looping through all the questions
-    for (var i = 0; i < questions.length; i++){
-
-        var iteratedQuestion = questions[i].question;
-
-        
-        var iteratedAnswers = questions[i].answers;
-
-
-
-        // function displayData()
-        // {
-        //     var data=['Apple', 'Banana', 'Kiwi'];
-        //     var output="";
-        //     var output2="";
-        //     var dataList;
     
-        //     for(var i=0; i< data.length; i++)
-        //     {
-        //         dataList=data[i];
-        //         output+= '<input type="checkbox" value='+dataList+' name="box2'+i+'">'  + '   ' + dataList+'   '+'<br><br>';
-        //         output2+= 'yes:<input type="radio" value="yes" name="box2'+i+'">'+'no:<input type="radio" value="yes" name="box2'+i+'">'+'<br><br>';
-        //         document.getElementById("dataList").innerHTML=output;
-        //         document.getElementById("radioBtn").innerHTML=output2;
-        //     }
-        // }
 
-        //creating true/false radio buttons for each question
+        //function to decrement counter
+        counter();
 
-        // var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
-        
-        // //appending radio buttons onto the page
-        // $("#questionDisplay").append(radioButtonTrue, radioButtonFalse);   
-
-        // //function to decrement counter
-        // counter();
-    }
-
-    for (var j = 0; j < 4; j++) {
-            
-
-        var radioButton = $("<fieldset><label class='radio-inline'><input type='radio' value = " + iteratedAnswers[j] + "name = 'answer-" + j +  " '>" + iteratedAnswers[j] + "</label></fieldset>");
-
-        $("#answer").append(radioButton);
-    }
 });
 
-// function counter(){
-//     //clearing intervalId so that no other instances can affect the timer
-//     clearInterval(intervalId);
-//     //setting intervalId to run decrement() every second
-//     intervalId = setInterval(decrement, 1000);
-// }
+function counter(){
+    //clearing intervalId so that no other instances can affect the timer
+    clearInterval(intervalId);
+    //setting intervalId to run decrement() every second
+    intervalId = setInterval(decrement, 1000);
+}
 
 //this function is called every second from counter().
-// function decrement() {
-//     //taking the time down by one second.
-//     timer--;
-//     //targeting #countDown div and updating the page with the timer's current position.
-//     $("#countDown").html("<h2>" + timer + "</h2>");
-//         //conditional to check where the timer is at.  If the timer is run down to 0 we want to end the quiz.
-//         if (timer === 0) {
-//             //taking the timer off the page.
-//             $("#countDown").hide();
+function decrement() {
+    //taking the time down by one second.
+    timer--;
+    //targeting #countDown div and updating the page with the timer's current position.
+    $("#countDown").html("<h2>" + timer + "</h2>");
+        //conditional to check where the timer is at.  If the timer is run down to 0 we want to end the quiz.
+        if (timer === 0) {
+            //taking the timer off the page.
+            $("#countDown").hide();
 
-//             $("#gameArea").hide();
+            $("#gameArea").hide();
             
-//             //triggering the function that will check the answers.
-//             calculateScore();
-//         }
-// }
+            //triggering the function that will check the answers.
+            calculateScore();
+        }
+}
 
 // if (timer === 0) {
 //     //taking the timer off the page.
