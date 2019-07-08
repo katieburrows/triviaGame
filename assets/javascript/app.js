@@ -10,7 +10,7 @@ var noAnswer = 0;
 
 var questions = [{ 
     question: "1. What animal does Professor McGonagall turn into?",
-    answers: ["toad", "rat", "cat", "penguin"],
+    answers: ["toad", "cat", "rat", "bat"],
     correctAnswer: "cat",
     image: "https://giphy.com/embed/y3Z92OG7KPCXS"
 },  {
@@ -84,14 +84,30 @@ $("#start").on("click", function(event){
 
         var iteratedQuestion = questions[i].question;
 
-        console.log(iteratedQuestion);
+        
         var iteratedAnswers = questions[i].answers;
 
-        for (var j = 0; j < iteratedAnswers.length; j++) {
-            console.log(iteratedAnswers[j]);
-        }
-        // //creating true/false radio buttons for each question
-        // var radioButtonTrue = $("<fieldset><label class='radio-inline'><input type='radio' value = 'true' name= 'question-" + i +  " '> True </label></fieldset>");
+
+
+        // function displayData()
+        // {
+        //     var data=['Apple', 'Banana', 'Kiwi'];
+        //     var output="";
+        //     var output2="";
+        //     var dataList;
+    
+        //     for(var i=0; i< data.length; i++)
+        //     {
+        //         dataList=data[i];
+        //         output+= '<input type="checkbox" value='+dataList+' name="box2'+i+'">'  + '   ' + dataList+'   '+'<br><br>';
+        //         output2+= 'yes:<input type="radio" value="yes" name="box2'+i+'">'+'no:<input type="radio" value="yes" name="box2'+i+'">'+'<br><br>';
+        //         document.getElementById("dataList").innerHTML=output;
+        //         document.getElementById("radioBtn").innerHTML=output2;
+        //     }
+        // }
+
+        //creating true/false radio buttons for each question
+
         // var radioButtonFalse = $("<fieldset><label class='radio-inline'><input type='radio' value = 'false' name= 'question-" + i + " '> False</label></fieldset>");
         
         // //appending radio buttons onto the page
@@ -99,6 +115,14 @@ $("#start").on("click", function(event){
 
         // //function to decrement counter
         // counter();
+    }
+
+    for (var j = 0; j < 4; j++) {
+            
+
+        var radioButton = $("<fieldset><label class='radio-inline'><input type='radio' value = " + iteratedAnswers[j] + "name = 'answer-" + j +  " '>" + iteratedAnswers[j] + "</label></fieldset>");
+
+        $("#answer").append(radioButton);
     }
 });
 
@@ -205,3 +229,6 @@ $("#start").on("click", function(event){
             //repeat decrementing/scoring process
 
     //once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
+
+
+
