@@ -11,6 +11,10 @@ body {
      
 }
 
+.jumbotron {
+    opacity: .8;
+}
+
 .card {
     max-width: 45rem!important;
     margin: 0 auto;
