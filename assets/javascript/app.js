@@ -4,6 +4,8 @@ var right = 0;
 var wrong = 0;
 var noAnswer = 0;
 
+$("#form").hide();
+
 //when the start button is clicked it kicks off the trivia questions and  code.
 $("#start").on("click", function(event){
     event.preventDefault();
@@ -11,8 +13,9 @@ $("#start").on("click", function(event){
     //hiding the start button.
     $("#start").hide();
 
-        //function to decrement counter
-        counter();
+    $("#form").show();
+    //function to decrement counter
+    counter();
 });
 
 function counter(){
