@@ -66,14 +66,16 @@ $("#start").on("click", function(event){
     $("#start").remove();
 
     $("#form").show();
+
     for (var i = 0; i < questions.length; i++) {
         $(".card-body").append("<h2>" + questions[i].question + "</h2>");
         for (var j = 0; j < questions[i].answers.length; j++) {
-            $(".card-body").append("<input type='radio' name='question-" + i +
-          "' value='" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
+            $(".card-body").append("<div class = 'radioBtns'><input type='radio' name='question-" + i +
+          "' value='" + questions[i].answers[j] + "''></div>" + questions[i].answers[j]);
         }
       }
 
+      
     //function to decrement counter
     counter();
 });

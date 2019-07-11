@@ -21,3 +21,14 @@ body {
     margin: 0 auto;
     opacity: .8;
 }
+
+h2 {
+    font-size: 25px;
+    margin: 15px 0px;
+
+}
+.radioBtns {
+    display: inline;
+    padding-left: 15px;
+    padding-right: 5px;
+}
