@@ -56,7 +56,7 @@ var questions = [{
     image: "https://media.giphy.com/media/S5s0P6MhcLeeY/giphy.gif"
 }]
 
-
+$("#form").hide();
 
 //when the start button is clicked it kicks off the trivia questions and  code.
 $("#start").on("click", function(event){
@@ -65,6 +65,7 @@ $("#start").on("click", function(event){
     //hiding the start button.
     $("#start").remove();
 
+    $("#form").show();
     for (var i = 0; i < questions.length; i++) {
         $(".card-body").append("<h2>" + questions[i].question + "</h2>");
         for (var j = 0; j < questions[i].answers.length; j++) {
