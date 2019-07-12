@@ -70,7 +70,7 @@ $("#start").on("click", function(event){
     for (var i = 0; i < questions.length; i++) {
         $(".card-body").append("<h2>" + questions[i].question + "</h2>");
         for (var j = 0; j < questions[i].answers.length; j++) {
-            $(".card-body").append("<div class = 'radioBtns'><input type='radio' name='question-" + i +
+            $(".card-body").append("<div class = 'radioBtns'><input style = 'font-size:45px' type='radio' name='question-" + i +
           "' value='" + questions[i].answers[j] + "''></div>" + questions[i].answers[j]);
         }
       }
