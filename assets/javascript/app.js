@@ -1,3 +1,4 @@
+alert("Site in progress!  The functionality of the game is in progress. Thank you!");
 var timer = 10;
 var intervalId;
 var right = 0;
