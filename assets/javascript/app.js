@@ -1,5 +1,5 @@
-alert("Site and functionality in progress");
-var timer = 10;
+// alert("Site and functionality in progress");
+var timer = 20;
 var intervalId;
 var right = 0;
 var wrong = 0;
@@ -76,6 +76,8 @@ $("#start").on("click", function(event){
         }
       }
 
+      var userAnswer = $(this).val();
+      console.log(userAnswer);
       
     //function to decrement counter
     counter();
@@ -116,6 +118,32 @@ if (timer === 0) {
     //triggering the function that will check the answers.
     calculateScore();
 }
+
+
+
+
+
+
+//collect answer
+//push answer to array
+//loop through array and compare it with questions.correctAnswer[i]
+    //correct++
+    //incorrect--
+
+
+function calculateScore() {
+    for (var i=0; i<questions.length; i++) {
+        $.each($("input[name='question-"+ i + "']:checked"), function() {
+            var userGuess = $(this).attr("value");
+            if (userGuess === questions[i].correctAnswer) {
+                console.log(`correct ${userGuess}`);
+            } else {
+                console.log(`incorrect ${userGuess}`);
+            }
+        });
+    };
+}
+
 
 // // function calculateScore(){
 // //thinking that $(this).attr() will be used and looped through again to check against the grading key 
