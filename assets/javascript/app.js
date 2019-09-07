@@ -1,5 +1,5 @@
 // alert("Site and functionality in progress");
-var timer = 20;
+var timer = 2;
 var intervalId;
 var right = 0;
 var wrong = 0;
@@ -58,6 +58,7 @@ var questions = [{
 }]
 
 $("#form").hide();
+$("#scoreBoard").hide();
 
 //when the start button is clicked it kicks off the trivia questions and  code.
 $("#start").on("click", function(event){
@@ -117,76 +118,39 @@ if (timer === 0) {
 
     //triggering the function that will check the answers.
     calculateScore();
+    
+
+
 }
 
-
-
-
-
-
-//collect answer
-//push answer to array
-//loop through array and compare it with questions.correctAnswer[i]
-    //correct++
-    //incorrect--
-
-
 function calculateScore() {
-    for (var i=0; i<questions.length; i++) {
+    $("#scoreBoard").show();
+    for (var i = 0; i <questions.length; i++) {
         $.each($("input[name='question-"+ i + "']:checked"), function() {
             var userGuess = $(this).attr("value");
             if (userGuess === questions[i].correctAnswer) {
                 console.log(`correct ${userGuess}`);
+                right++;
             } else {
                 console.log(`incorrect ${userGuess}`);
+                wrong++;
             }
         });
     };
+    console.log(`right: ${right}`);
+    console.log(`wrong: ${wrong}`);
 }
 
+        $("#scoreBoard").append(`${"Score: "}${right}${"/10"}`);
+        $("#scoreBoard").append(`${"Number of wrong answers:"} ${wrong}`);
 
-// // function calculateScore(){
-// //thinking that $(this).attr() will be used and looped through again to check against the grading key 
-
-//             //if value grab the value and store it in userGuess
-//             //grab value of radio button
-//             //compare userGuess to questions[i].answers
-
-// //two ways to go about this potentially:  create a userGuess variable that will be able to tell if there is no value stored in it (not sure if this is possible with forms, probably is with :checked) OR if there is a true/false value in it.  Use that in the conditionals, if that doesn't work then may need to a create a variable once inside the conditional section that grabs the value (so 2-3 instances of this variable to be created/mutated).
-    
-//     for (var i = 0; i < questions[i].answers.length; i++){
-//         var radioValue = $(this).attr();
-//         console.log(radioValue);
-//     }
-//         // var radioValue = $("input[name='question-" + [i] + "']:checked").val();
-//         // if(radioValue){
-//         //     console.log(`${"radio value:"} ${radioValue}`);
-//         // }
-  
-    
-
-//     //check if there was an answer; compare userGuess of radio button to correct answer to calculate the score.
-//         /*if (!value){
-//             noAnswer++
-
-//         } else if (value){
-//             if (value === correctAnswer){
-//                 right++;
-//             } else if (value != correctAnswer){
-//                 wrong++;
-//             }
-//         }
-
-//         $("#scoreBoard").append(`${"Score: "}${right}${"/10"}`);
-//         $("#scoreBoard").append(`${"Number of wrong answers:"} ${wrong}`);
-//         $("#scoreBoard").append(`${"Number of unanswered questions:"} ${noAnswer}`);
-//         */
         
-// }
+        
+
 
 //once the timer is done OR the user has hit a submit button the screen is wiped away and the score is reported
 
-//use data- ?
+
 
 //once all the questions have been gone through display the user's score and offer a chance to restart the game--restart code.
 
